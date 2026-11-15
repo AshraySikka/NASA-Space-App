@@ -57,7 +57,7 @@ export function Simulator() {
           <>
             {drive.viz.mode === 'ghost' ? 'No flame is drawn: the nearest test, ' : 'The animation follows the outcome recorded for the nearest test, '}
             <TestChip id={drive.driver.test_id} />
-            {drive.viz.mode === 'ghost' ? ', has no stated outcome.' : '. Flame size, tilt and colour are artistic cues, not data.'}
+            {drive.viz.mode === 'ghost' ? ', has no stated outcome.' : '. Flame size, tilt and colour are artistic cues, not data. The strip is schematic: where the flame stops shows the outcome type only, not time or distance.'}
           </>
         ) : (
           'No flame is drawn: no test of this material is near these conditions.'

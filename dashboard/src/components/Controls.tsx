@@ -24,6 +24,15 @@ function Slider({ id, label, value, min, max, step, display, onChange, hint }: {
   )
 }
 
+function Tip({ text, label }: { text: string; label: string }) {
+  return (
+    <span className="tip" tabIndex={0} role="note" aria-label={label}>
+      <Info size={14} aria-hidden />
+      <span className="tip-body">{text}</span>
+    </span>
+  )
+}
+
 const GRAVITY: { v: Gravity; label: string; sub: string }[] = [
   { v: '0g', label: '0 g', sub: 'tested' },
   { v: '1g', label: '1 g', sub: 'no test rows' },
@@ -44,8 +53,14 @@ export function Controls() {
 
   return (
     <section className="panel controls" data-panel="controls" aria-label="Simulator controls" data-tour="controls">
+      <div className="controls-top">
       <div className="field material">
-        <label htmlFor="material">Material</label>
+        <div className="label-row">
+          <label htmlFor="material">Material</label>
+          {m.evidence_roles.context && !m.evidence_roles.verified && !m.evidence_roles['published-event'] && (
+            <Tip label="About this material's data" text="Context rows only: outcomes for this material have not been reviewed, and airflow is the raw display reading." />
+          )}
+        </div>
         <div className="material-row">
           <select id="material" value={controls.material} onChange={(e) => setControl('material', e.target.value)}>
             {data.ranges.materials.map((x) => (
@@ -66,30 +81,6 @@ export function Controls() {
             ))}
           </div>
         </div>
-        {m.evidence_roles.context && !m.evidence_roles.verified && !m.evidence_roles['published-event'] && (
-          <p className="hint">Context rows only: outcomes for this material have not been reviewed, and airflow is the raw display reading.</p>
-        )}
-      </div>
-
-      <div className="slider-grid">
-        <Slider id="o2" label="Oxygen" min={b.o2.min} max={b.o2.max} step={0.1} value={controls.o2_pct ?? b.o2.min} display={fmtO2(controls.o2_pct, prefs.o2Unit, controls.pressure_kpa)} onChange={(v) => setControl('o2_pct', v)}
-          hint={prefs.o2Unit === 'kPa' && controls.pressure_kpa == null ? 'Shown in % because partial pressure needs a total pressure. Set one below.' : undefined} />
-        <Slider id="flow" label="Airflow" min={b.flow.min} max={b.flow.max} step={0.5} value={controls.flow_cm_s ?? 0} display={fmtFlow(controls.flow_cm_s, prefs.flowUnit)} onChange={(v) => setControl('flow_cm_s', v)} />
-        {b.pressure && (
-          <div className="slider">
-            <div className="slider-head">
-              <label className="check">
-                <input type="checkbox" checked={controls.pressure_kpa != null} onChange={(e) => setControl('pressure_kpa', e.target.checked ? Math.round(m.pressure_kpa?.min ?? b.pressure!.max - 9) : null)} />
-                Set pressure
-              </label>
-              <output className="mono" data-user-value>
-                {controls.pressure_kpa == null ? 'not set' : `${controls.pressure_kpa} kPa`}
-              </output>
-            </div>
-            <input type="range" aria-label="Pressure in kilopascals" min={b.pressure.min} max={b.pressure.max} step={0.5} disabled={controls.pressure_kpa == null} value={controls.pressure_kpa ?? b.pressure.max} onChange={(e) => setControl('pressure_kpa', Number(e.target.value))} />
-            <p className="hint">{hasPressureRows ? 'Some rows for this material record a pressure, so it counts in the rating.' : 'No row for this material records a pressure.'}</p>
-          </div>
-        )}
       </div>
 
       <div className="field">
@@ -111,6 +102,30 @@ export function Controls() {
           ))}
         </div>
       </div>
+      </div>
+
+      <div className="slider-grid three">
+        <Slider id="o2" label="Oxygen" min={b.o2.min} max={b.o2.max} step={0.1} value={controls.o2_pct ?? b.o2.min} display={fmtO2(controls.o2_pct, prefs.o2Unit, controls.pressure_kpa)} onChange={(v) => setControl('o2_pct', v)}
+          hint={prefs.o2Unit === 'kPa' && controls.pressure_kpa == null ? 'Shown in % because partial pressure needs a total pressure. Set one below.' : undefined} />
+        <Slider id="flow" label="Airflow" min={b.flow.min} max={b.flow.max} step={0.5} value={controls.flow_cm_s ?? 0} display={fmtFlow(controls.flow_cm_s, prefs.flowUnit)} onChange={(v) => setControl('flow_cm_s', v)} />
+        {b.pressure && (
+          <div className="slider">
+            <div className="slider-head">
+              <label className="check">
+                <input type="checkbox" checked={controls.pressure_kpa != null} onChange={(e) => setControl('pressure_kpa', e.target.checked ? Math.round(m.pressure_kpa?.min ?? b.pressure!.max - 9) : null)} />
+                Set pressure
+              </label>
+              <Tip label="About pressure" text={hasPressureRows ? 'Some rows for this material record a pressure, so it counts in the rating.' : 'No row for this material records a pressure.'} />
+              <output className="mono" data-user-value>
+                {controls.pressure_kpa == null ? 'not set' : `${controls.pressure_kpa} kPa`}
+              </output>
+            </div>
+            <input type="range" aria-label="Pressure in kilopascals" min={b.pressure.min} max={b.pressure.max} step={0.5} disabled={controls.pressure_kpa == null} value={controls.pressure_kpa ?? b.pressure.max} onChange={(e) => setControl('pressure_kpa', Number(e.target.value))} />
+            
+          </div>
+        )}
+      </div>
+
     </section>
   )
 }

@@ -31,7 +31,7 @@ export function About() {
         </header>
         <div className="modal-body">
           <h3>What this is</h3>
-          <p>A research assistant for fabric and spacecraft fire safety. It answers only from NASA data and documents, cites the source and page, rates how strong the evidence is, and shows where nothing has been tested. Built by Team Apex for NASA Space Apps 2026, “Flame in Freefall”. It is not affiliated with or endorsed by NASA.</p>
+          <p>EMBER, Evidence Mapping for Burning Experiments and Research, is a research assistant for fabric and spacecraft fire safety. It answers only from NASA data and documents, cites the source and page, rates how strong the evidence is, and shows where nothing has been tested. Built by Team Apex for NASA Space Apps 2026, “Flame in Freefall”. It is not affiliated with or endorsed by NASA.</p>
 
           <h3>Data</h3>
           <p>

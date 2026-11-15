@@ -1,4 +1,4 @@
-# Flame in Freefall (Team Apex, NASA Space Apps 2026)
+# EMBER (Team Apex, NASA Space Apps 2026)
 PY ?= python3
 API_PORT ?= 8000
 

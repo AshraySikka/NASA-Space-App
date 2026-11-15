@@ -69,7 +69,7 @@ export function TopBar() {
   const d = useDerived()
   const exportCsv = () => {
     if (!d) return
-    download(`flame-in-freefall-evidence-${controls.material.replace(/\W+/g, '-').toLowerCase()}.csv`, evidenceCsv(controls, d.rating, d.byId, d.sources))
+    download(`ember-evidence-${controls.material.replace(/\W+/g, '-').toLowerCase()}.csv`, evidenceCsv(controls, d.rating, d.byId, d.sources))
     say('Evidence exported as CSV')
   }
   const status = !data ? 'Loading data' : !api ? 'Checking assistant' : !api.reachable ? 'Assistant offline · local view' : api.engines.gemini || api.engines.claude ? 'Real NASA data · AI search on' : 'Real NASA data · local answers only'
@@ -78,7 +78,7 @@ export function TopBar() {
       <div className="brand">
         <span className="logo" aria-hidden />
         <div>
-          <h1>Flame in Freefall</h1>
+          <h1>EMBER</h1>
           <p>Evidence finder for fabric and spacecraft fire safety</p>
         </div>
       </div>
