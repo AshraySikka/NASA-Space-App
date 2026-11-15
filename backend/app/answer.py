@@ -10,7 +10,7 @@ from __future__ import annotations
 import asyncio
 import json
 import re
-from typing import Awaitable, Callable
+from collections.abc import Awaitable, Callable
 
 from . import clarify, config, llm, web
 from .conditions import merge, parse
@@ -345,7 +345,8 @@ async def run(req: dict, emit: Emit) -> dict:
             for w in wins[:2]:
                 pid = P.add_web(f["url"], f["title"], w, web.tier_for(f["url"]))
                 cl = chunk_claim(pid, P.items[pid], question)
-                if cl:
+                # same relevance gate as local passages: a live page is only quoted if a sentence of it is about the question
+                if cl and quote_coverage(cl["quote"], question, index) >= QUOTE_COVERAGE_OK:
                     claims.append(cl)
 
     P.link_siblings()

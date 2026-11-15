@@ -72,20 +72,20 @@ def _missing_flow(question: str, parsed: dict, cond: dict, store) -> dict | None
     mat = cond.get("material")
     partial = cond.get("gravity") in ("moon", "mars", "partial")
     if (not mat or cond.get("o2_pct") is None or cond.get("flow_cm_s") is not None or parsed["any_airflow"] or parsed["no_airflow_stated"]
-            or partial or parsed["intent"] in ("gap", "compare", "closest") or parsed["wants_certification"]):
+            or partial or parsed["intent"] in ("gap", "compare", "closest") or parsed["wants_certification"]
+            or (not parsed["materials"] and "material" in (cond.get("from_simulator") or []))):  # material only borrowed from the simulator: a general question, not a conditions question
         return None
     rng = next((m for m in store.ranges["materials"] if m["material_group"] == mat), None)
+    fl = (rng or {}).get("flow_any_cm_s") or {}
+    if not fl.get("n"):
+        return None  # no published airflow for this material: nothing to pick from, so answer with what exists
     starts = sorted({t["flow_start_cm_s"] for t in store.tests if t["material_group"] == mat and t.get("flow_start_cm_s") is not None})
     base = _tidy(question)
-    opts = []
-    if rng and rng.get("flow_any_cm_s", {}).get("n"):
-        lo, hi = rng["flow_any_cm_s"]["min"], rng["flow_any_cm_s"]["max"]
-        mid = round(statistics.median(starts), 1) if starts else None
-        picks = [v for v in dict.fromkeys([lo, mid, hi]) if v is not None]
-        opts = [_opt(f"{_fmt(v)} cm/s", f"{base}, at {_fmt(v)} cm/s airflow?") for v in picks]
-        where = f" The {mat} tests in this corpus ran at {_fmt(lo)} to {_fmt(hi)} cm/s."
-    else:
-        where = ""
+    lo, hi = fl["min"], fl["max"]
+    mid = round(statistics.median(starts), 1) if starts else None
+    picks = [v for v in dict.fromkeys([lo, mid, hi]) if v is not None]
+    opts = [_opt(f"{_fmt(v)} cm/s", f"{base}, at {_fmt(v)} cm/s airflow?") for v in picks]
+    where = f" The {mat} tests in this corpus ran at {_fmt(lo)} to {_fmt(hi)} cm/s."
     opts.append(_opt("Any airflow", f"{base}, at any airflow?"))
     return {"kind": "airflow_missing", "prompt": f"What airflow should I use for {mat} at {_fmt(cond['o2_pct'])}% oxygen? Airflow changes the outcome, so I won't guess it.{where}",
             "hint": "Pick one, or type a value with its unit, for example 5 cm/s.", "options": opts}
