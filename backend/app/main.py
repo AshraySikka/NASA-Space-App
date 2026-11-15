@@ -18,7 +18,7 @@ from .rating import rate
 from .store import DataMissing, get_store
 
 limiter = Limiter(key_func=get_remote_address)
-app = FastAPI(title="Flame in Freefall evidence API", docs_url="/api/docs", openapi_url="/api/openapi.json")
+app = FastAPI(title="EMBER evidence API", docs_url="/api/docs", openapi_url="/api/openapi.json")
 app.state.limiter = limiter
 app.add_middleware(CORSMiddleware, allow_origins=config.FRONTEND_ORIGINS(), allow_credentials=False, allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 

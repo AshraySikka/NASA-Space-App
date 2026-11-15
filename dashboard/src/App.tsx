@@ -79,8 +79,8 @@ export default function App() {
           </div>
           <div className="zone zone-center" data-zone="simulator">
             <Simulator />
-            <ResultBanner />
             <Controls />
+            <ResultBanner />
           </div>
           <div className="zone zone-right" data-zone="right">
             <div className="tabs" role="tablist" aria-label="Evidence views" data-tour="tabs">

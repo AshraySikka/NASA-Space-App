@@ -1,4 +1,4 @@
-# Flame in Freefall: an evidence finder for fabric and spacecraft fire safety
+# EMBER: Evidence Mapping for Burning Experiments and Research
 
 Team Apex, NASA Space Apps Challenge 2026 ("Flame in Freefall", Toronto).
 
