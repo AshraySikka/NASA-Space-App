@@ -1,0 +1,28 @@
+{
+  "_comment": "Presentation only. Maps each recorded outcome phrase found in the data to a marker and to the illustrative flame behaviour. Phrases are matched exactly; a phrase missing from this file is drawn as 'unknown' and listed in extraction_report.md. This file never changes a recorded outcome.",
+  "families": {
+    "sustained":   {"label": "Flame observed",            "marker": "circle",   "color": "#E69F00", "flame": "steady"},
+    "burned_out":  {"label": "Fuel burned out",           "marker": "square",   "color": "#D55E00", "flame": "steady"},
+    "quenched":    {"label": "Quenched at low flow",      "marker": "triangle-down", "color": "#0072B2", "flame": "fade"},
+    "blown_out":   {"label": "Blown out at high flow",    "marker": "triangle-up",   "color": "#56B4E9", "flame": "blow"},
+    "survived":    {"label": "Survived flow challenge",   "marker": "diamond",  "color": "#CC79A7", "flame": "steady"},
+    "no_flame":    {"label": "No sustained flame",        "marker": "cross",    "color": "#009E73", "flame": "flash"},
+    "extinguished":{"label": "Extinguished (other)",      "marker": "triangle-down", "color": "#7F8FA6", "flame": "fade"},
+    "unknown":     {"label": "Outcome not stated",        "marker": "ring",     "color": "#9AA5B1", "flame": "ghost"}
+  },
+  "phrases": {
+    "Quenched after reduced airflow": "quenched",
+    "Flame observed; ending unstated": "sustained",
+    "Not stated": "unknown",
+    "No sustained flame": "no_flame",
+    "Fuel burned out": "burned_out",
+    "No blowoff in tested challenge": "survived",
+    "Blown out by higher airflow": "blown_out",
+    "Extinguished after fan change; reused": "extinguished",
+    "Did not ignite": "no_flame",
+    "Burn reported; final ending not extracted": "sustained",
+    "Two-sided flame spread reported; final ending not extracted": "sustained",
+    "One-sided flame spread reported; final ending not extracted": "sustained",
+    "Outcome not reviewed": "unknown"
+  }
+}

@@ -10,7 +10,7 @@ import * as THREE from 'three'
 import { Flame, SAMPLE_HALF, type FrontState } from './Flame'
 import { HeatHaze } from './heat-haze'
 import { makeCharTexture, makeFloorArrowTexture, makeHoneycombTexture, makeWeaveTexture } from './textures'
-import { REGIME_COLORS, REGIME_LABELS, type Controls, type VizState } from './types'
+import type { SceneControls as Controls, VizState } from './types'
 
 const FLOW_L = -5.0
 const FLOW_R = 5.0
@@ -92,8 +92,10 @@ function Duct({
 
   // procedural weave for the virgin cloth, procedural cracks for the char
   const weave = useMemo(() => {
-    const cotton = material.startsWith('cotton')
-    return makeWeaveTexture(cotton ? '#e7e0d0' : '#d9a441', cotton ? '#ffffff' : '#f2c66a')
+    // cloth tint only tells materials apart on screen; it is not a material property
+    const m = material.toLowerCase()
+    const [a, b] = m.includes('nomex') ? ['#d9a441', '#f2c66a'] : m.includes('pmma') ? ['#cfe3ee', '#f4fbff'] : ['#e7e0d0', '#ffffff']
+    return makeWeaveTexture(a, b)
   }, [material])
   const charTex = useMemo(() => makeCharTexture(), [])
   const honey = useMemo(() => makeHoneycombTexture(), [])
@@ -266,11 +268,13 @@ function SceneContents({
   controls,
   front,
   view,
+  effects,
 }: {
   viz: VizState
   controls: Controls
   front: { current: FrontState }
   view: ViewMode
+  effects: 'full' | 'bloom' | 'none'
 }) {
   return (
     <>
@@ -290,111 +294,51 @@ function SceneContents({
         minDistance={4}
         maxDistance={14}
       />
-      {/* bloom makes the flame core overexpose and glow bleed past the
-          silhouette, which is the main "this is real fire" visual cue */}
-      <EffectComposer multisampling={0}>
-        <Bloom mipmapBlur intensity={1.15} luminanceThreshold={0.32} luminanceSmoothing={0.25} />
-        <Vignette offset={0.28} darkness={0.75} />
-        <HeatHazeLayer viz={viz} controls={controls} front={front} />
-      </EffectComposer>
+      {/* bloom makes the flame core glow; dropped on the Low quality setting */}
+      {effects === 'full' && (
+        <EffectComposer multisampling={0}>
+          <Bloom mipmapBlur intensity={1.15} luminanceThreshold={0.32} luminanceSmoothing={0.25} />
+          <Vignette offset={0.28} darkness={0.75} />
+          <HeatHazeLayer viz={viz} controls={controls} front={front} />
+        </EffectComposer>
+      )}
+      {effects === 'bloom' && (
+        <EffectComposer multisampling={0}>
+          <Bloom mipmapBlur intensity={1.0} luminanceThreshold={0.34} luminanceSmoothing={0.25} />
+        </EffectComposer>
+      )}
     </>
   )
 }
 
-const CONF_COLORS: Record<VizState['confidence'], string> = {
-  'LITERATURE-ANCHORED': '#22c55e',
-  INTERPOLATED: '#eab308',
-  EXTRAPOLATED: '#f43f5e',
-}
+export type SceneQuality = 'high' | 'balanced' | 'low'
 
-export function Scene3D({ viz, controls, onCite, front }: {
+/** The 3D scene only. Labels, rating and citations live in the panels that own them. */
+export function Scene3D({ viz, controls, front, quality, paused, background }: {
   viz: VizState
   controls: Controls
-  onCite: (id: string) => void
   front: { current: FrontState }
+  quality: SceneQuality
+  paused: boolean
+  background: string
 }) {
   const [view, setView] = useState<ViewMode>('side')
-  const midGravity = controls.gravity_g > 0.02 && controls.gravity_g < 0.98
-  const starving = controls.flow_cm_s <= 2.5 && controls.gravity_g < 0.3
+  const dpr: [number, number] = quality === 'high' ? [1, 2] : quality === 'balanced' ? [1, 1.5] : [1, 1]
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-lg border border-slate-800 bg-slate-950">
-      <Canvas camera={{ position: [0, 3.2, 6.8], fov: 42 }} dpr={[1, 2]}>
-        <color attach="background" args={['#070a0f']} />
-        <SceneContents viz={viz} controls={controls} front={front} view={view} />
+    <div className="scene-wrap">
+      <Canvas camera={{ position: [0, 3.2, 6.8], fov: 42 }} dpr={dpr} frameloop={paused ? 'demand' : 'always'} gl={{ antialias: quality !== 'low', powerPreference: 'high-performance' }}>
+        <color attach="background" args={[background]} />
+        <SceneContents viz={viz} controls={controls} front={front} view={view} effects={quality === 'high' ? 'full' : quality === 'balanced' ? 'bloom' : 'none'} />
       </Canvas>
-
-      {/* view toggle: side profile vs top-down sweep */}
-      <div className="absolute top-3 left-1/2 flex -translate-x-1/2 overflow-hidden rounded border border-slate-700 bg-slate-900/90">
+      <div className="scene-view" role="group" aria-label="Camera view">
         {(['side', 'top'] as const).map((v) => (
-          <button
-            key={v}
-            onClick={() => setView(v)}
-            className={`px-2.5 py-1 text-[11px] font-semibold ${
-              view === v ? 'bg-sky-600 text-white' : 'text-slate-300 hover:bg-slate-800'
-            }`}
-          >
+          <button key={v} type="button" aria-pressed={view === v} onClick={() => setView(v)} className={view === v ? 'seg on' : 'seg'}>
             {v === 'side' ? 'Side view' : 'Top-down view'}
           </button>
         ))}
       </div>
-
-      {/* regime badge */}
-      <div
-        className="absolute top-3 left-3 rounded px-2.5 py-1 text-xs font-bold tracking-wide"
-        style={{ backgroundColor: REGIME_COLORS[viz.regime], color: '#04101a' }}
-      >
-        {REGIME_LABELS[viz.regime]}
-      </div>
-
-      {/* confidence badge */}
-      <div
-        className="absolute top-3 right-3 rounded px-2.5 py-1 text-xs font-semibold text-slate-950"
-        style={{ backgroundColor: CONF_COLORS[viz.confidence] }}
-        title="How this reading was produced"
-      >
-        {viz.confidence}
-      </div>
-
-      {/* live readout + citations */}
-      <div className="absolute bottom-3 left-3 flex flex-col gap-1.5">
-        {starving && (
-          <div className="max-w-[340px] rounded border border-sky-700/70 bg-sky-950/85 px-2.5 py-1 text-[11px] leading-snug text-sky-200">
-            Near-still microgravity is diffusion-limited: the flame consumes the local oxygen and
-            self-extinguishes. Shown here as a starving flame.
-          </div>
-        )}
-        <div className="rounded bg-slate-900/85 px-2.5 py-1 text-xs text-slate-200">
-          spread rate{' '}
-          <span className="font-mono text-orange-400">{viz.spread_rate_mm_s.toFixed(2)} mm/s</span>
-          {'  |  '}gravity{' '}
-          <span className="font-mono text-sky-300">{controls.gravity_g.toFixed(2)} g</span>
-        </div>
-        <div className="flex flex-wrap gap-1.5">
-          {viz.nearest.map((t) => (
-            <button
-              key={t.test_id}
-              onClick={() => onCite(t.test_id)}
-              className="rounded bg-sky-900/70 px-2 py-0.5 font-mono text-[11px] text-sky-200 hover:bg-sky-800"
-              title={`Open dossier for ${t.test_id}`}
-            >
-              {t.test_id}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* honesty labels */}
-      <div className="absolute right-3 bottom-3 max-w-[280px] text-right">
-        {midGravity && (
-          <div className="mb-1.5 rounded border border-amber-500/60 bg-amber-950/80 px-2 py-1 text-[11px] text-amber-300">
-            Gravity between bounds: estimate between 0g and 1g. No partial-gravity data in PSI today.
-          </div>
-        )}
-        <div className="text-[10px] leading-snug text-slate-500">
-          Illustrative visualization driven by interpolation between cited test conditions. Not a
-          CFD solution.
-        </div>
-      </div>
     </div>
   )
 }
+
+export default Scene3D

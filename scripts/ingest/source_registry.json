@@ -1,0 +1,366 @@
+{
+ "_comment": "Bibliographic metadata for files in raw_data. Titles were read off each document's first page; URLs are the public NASA / primary-source locations. This is metadata, not experimental data.",
+ "files": {
+  "TM-20210011385.pdf": {
+   "id": "ntrs-20210011385",
+   "title": "Burning and Suppression of Solids-II (BASS-II) Summary Report",
+   "publisher": "NASA Glenn Research Center (NASA/TM-20210011385)",
+   "year": 2021,
+   "type": "technical memorandum",
+   "url": "https://ntrs.nasa.gov/citations/20210011385",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20210011385/downloads/TM-20210011385.pdf",
+   "printed_page_offset": -8
+  },
+  "20160012691.pdf": {
+   "id": "ntrs-20160012691",
+   "title": "Correlation of normal gravity mixed convection blowoff limits with microgravity forced flow blowoff limits",
+   "publisher": "Central States Section of the Combustion Institute / NASA NTRS",
+   "year": 2016,
+   "type": "conference paper",
+   "url": "https://ntrs.nasa.gov/citations/20160012691"
+  },
+  "20130012832.pdf": {
+   "id": "ntrs-20130012832",
+   "title": "Flammability Aspects of a Cotton-Fiberglass Fabric in Opposed and Concurrent Airflow in Microgravity",
+   "publisher": "NASA NTRS (ASGSR 2012 presentation)",
+   "year": 2012,
+   "type": "presentation",
+   "url": "https://ntrs.nasa.gov/citations/20130012832",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20130012832/downloads/20130012832.pdf"
+  },
+  "20140011099.pdf": {
+   "id": "ntrs-20140011099",
+   "title": "Thickness and Fuel Preheating Effects on Material Flammability in Microgravity from the BASS Experiment",
+   "publisher": "NASA NTRS (BASS presentation)",
+   "year": 2013,
+   "type": "presentation",
+   "url": "https://ntrs.nasa.gov/citations/20140011099",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20140011099/downloads/20140011099.pdf"
+  },
+  "20170008805.pdf": {
+   "id": "ntrs-20170008805",
+   "title": "Results of Large-Scale Spacecraft Flammability Tests",
+   "publisher": "NASA NTRS",
+   "year": 2017,
+   "type": "presentation",
+   "url": "https://ntrs.nasa.gov/citations/20170008805",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20170008805/downloads/20170008805.pdf"
+  },
+  "20170000230.pdf": {
+   "id": "ntrs-20170000230",
+   "title": "Operation and Development Status of the Spacecraft Fire Experiments (Saffire)",
+   "publisher": "46th ICES / NASA NTRS",
+   "year": 2016,
+   "type": "conference paper",
+   "url": "https://ntrs.nasa.gov/citations/20170000230",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20170000230/downloads/20170000230.pdf"
+  },
+  "20200000557.pdf": {
+   "id": "ntrs-20200000557",
+   "title": "Buoyancy Effects on Concurrent Flame Spread Over Thick PMMA",
+   "publisher": "NASA NTRS",
+   "year": 2020,
+   "type": "journal manuscript",
+   "url": "https://ntrs.nasa.gov/citations/20200000557",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20200000557/downloads/20200000557.pdf",
+   "notes": "Year shown is the NTRS record year."
+  },
+  "ICES-2021-15.pdf": {
+   "id": "ntrs-20210017789",
+   "title": "The effect of reduced pressure on the characteristics of spreading flames",
+   "publisher": "50th ICES (ICES-2021-15) / NASA NTRS",
+   "year": 2021,
+   "type": "conference paper",
+   "url": "https://ntrs.nasa.gov/citations/20210017789",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20210017789/downloads/ICES-2021-15.pdf"
+  },
+  "19990036744.pdf": {
+   "id": "ntrs-19990036744",
+   "title": "NASA-STD-6001: Flammability, Odor, Offgassing, and Compatibility Requirements and Test Procedures",
+   "publisher": "NASA",
+   "year": 1998,
+   "type": "standard",
+   "url": "https://ntrs.nasa.gov/citations/19990036744",
+   "notes": "1998 version. Superseded by later revisions; shown for context only."
+  },
+  "ICES 2021-266 0503-2021 final.pdf": {
+   "id": "ntrs-20210011521",
+   "title": "Fire Safety Implications of Preliminary Results from Saffire IV and V Experiments on Large Scale Spacecraft Fires",
+   "publisher": "50th ICES (ICES-2021-266) / NASA NTRS",
+   "year": 2021,
+   "type": "conference paper",
+   "url": "https://ntrs.nasa.gov/citations/20210011521",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20210011521/downloads/ICES%202021-266%200503-2021%20final.pdf"
+  },
+  "Saffire ICES 2021 Saffire Final presentation compressed.pdf": {
+   "id": "ntrs-20210017780",
+   "title": "Fire Safety Implications of Preliminary Results from Saffire IV and V Experiments (presentation)",
+   "publisher": "NASA NTRS",
+   "year": 2021,
+   "type": "presentation",
+   "url": "https://ntrs.nasa.gov/citations/20210017780",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20210017780/downloads/Saffire%20ICES%202021%20Saffire%20Final%20presentation%20compressed.pdf"
+  },
+  "Saffire-ICES-2024-ICES-365-accepted final.pdf": {
+   "id": "ntrs-20240002981",
+   "title": "Preliminary Results from the Saffire VI Experiment",
+   "publisher": "53rd ICES (ICES-2024-365) / NASA NTRS",
+   "year": 2024,
+   "type": "conference paper",
+   "url": "https://ntrs.nasa.gov/citations/20240002981"
+  },
+  "Vehicle Modeling_FINAL.pdf": {
+   "id": "ntrs-20250002675",
+   "title": "Vehicle Modeling During the Burn Events in the Saffire VI Experiments",
+   "publisher": "54th ICES (ICES-2025-156) / NASA NTRS",
+   "year": 2025,
+   "type": "conference paper",
+   "url": "https://ntrs.nasa.gov/citations/20250002675",
+   "pdf_url": "https://ntrs.nasa.gov/api/citations/20250002675/downloads/Vehicle%20Modeling_FINAL.pdf"
+  },
+  "SIBAL-cotton revised Sept per review track changes accepted.pdf": {
+   "id": "ucl-10164340",
+   "title": "The effect of duct size, sample size, and fuel composition on concurrent flame spread over large cellulose samples in microgravity",
+   "publisher": "UCL Discovery (accepted manuscript, Olson et al.)",
+   "year": null,
+   "type": "journal manuscript",
+   "url": "https://discovery.ucl.ac.uk/id/eprint/10164340/"
+  },
+  "10121773.pdf": {
+   "id": "nsf-10121773",
+   "title": "Flame Spread Over Ultra-thin Solids: Effect of Area Density and Concurrent-Opposed Spread Reversal Phenomenon",
+   "publisher": "Fire Technology (NSF PAR accepted manuscript)",
+   "year": 2019,
+   "type": "journal article",
+   "url": "https://par.nsf.gov/servlets/purl/10121773"
+  },
+  "BASS_GMT50_SAMPLE_147_TEST_B1 original videos.pdf": {
+   "id": "psi-25-uscm2015",
+   "title": "Concurrent flame growth, spread and extinction over composite fabric samples in low speed purely forced flow in microgravity",
+   "publisher": "9th U.S. National Combustion Meeting (file distributed with NASA PSI-25)",
+   "year": 2015,
+   "type": "conference paper",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+   "notes": "Local filename is misleading: this PDF is a conference paper, not a video index."
+  },
+  "US National Meeting-070HE-0218-Final.docx": {
+   "id": "psi-26-uscm2013",
+   "title": "Flammability Aspects of Fabric in Opposed and Concurrent Air Flow in Microgravity",
+   "publisher": "8th U.S. National Combustion Meeting (file distributed with NASA PSI)",
+   "year": 2013,
+   "type": "conference paper",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26"
+  },
+  "SRD_BASS.pdf": {
+   "id": "psi-26-srd",
+   "title": "Science Requirements for Burning and Suppression of Solids (BASS)",
+   "publisher": "NASA PSI-26",
+   "year": 2010,
+   "type": "requirements document",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26"
+  },
+  "SRD_BASS-II.pdf": {
+   "id": "psi-25-srd",
+   "title": "BASS-II Science Requirements",
+   "publisher": "NASA PSI-25",
+   "year": null,
+   "type": "requirements document",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "BASS-II Procedure.docx": {
+   "id": "psi-25-procedure",
+   "title": "BASS-II crew procedure",
+   "publisher": "NASA PSI-25",
+   "year": null,
+   "type": "procedure",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "BASS-II data FAQ.docx": {
+   "id": "psi-25-faq",
+   "title": "BASS-II data FAQ",
+   "publisher": "NASA PSI-25",
+   "year": null,
+   "type": "data guide",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "BASS-2 Engineering Requirements.pptx": {
+   "id": "psi-25-engreq",
+   "title": "BASS-2 Engineering Requirements",
+   "publisher": "NASA PSI-25",
+   "year": null,
+   "type": "requirements document",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "PSI-25_Experimental table_BASS-II.csv": {
+   "id": "psi-25-table",
+   "title": "PSI-25 Experimental table, BASS-II",
+   "publisher": "NASA Physical Sciences Informatics (PSI-25)",
+   "year": 2014,
+   "type": "dataset",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "BASS-II Test Matrix by PI Final.xlsx": {
+   "id": "psi-25-matrix",
+   "title": "BASS-II Test Matrix by PI (Final)",
+   "publisher": "NASA PSI-25",
+   "year": 2014,
+   "type": "dataset",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "Fan calibration data.xlsx": {
+   "id": "psi-25-fancal",
+   "title": "BASS-II fan calibration data",
+   "publisher": "NASA PSI-25",
+   "year": 2014,
+   "type": "dataset",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "BASS Test Matrix 050213.xlsx": {
+   "id": "psi-26-matrix",
+   "title": "BASS Test Matrix (050213)",
+   "publisher": "NASA PSI-26",
+   "year": 2013,
+   "type": "dataset",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26"
+  },
+  "BASS_II_Verified_Fabric_Outcomes.xlsx": {
+   "id": "apex-verified-outcomes",
+   "title": "BASS-II Verified Fabric Outcomes (Team Apex page-referenced review of NASA/TM-20210011385)",
+   "publisher": "Team Apex review sheet; every row cites a page of NASA/TM-20210011385",
+   "year": 2026,
+   "type": "review sheet",
+   "url": "https://ntrs.nasa.gov/citations/20210011385"
+  },
+  "NASA Hackathon - Data - Fabric Research  (1).xlsx": {
+   "id": "apex-working-sheet",
+   "title": "Team Apex working sheet (copy of PSI-25 table plus a partial 'verified tests' tab)",
+   "publisher": "Team Apex",
+   "year": 2026,
+   "type": "working sheet",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+   "index": false
+  },
+  "NASA_Fire_Research_Cards.xlsx": {
+   "id": "apex-research-cards",
+   "title": "NASA fire research cards (Team Apex summaries with NASA source links)",
+   "publisher": "Team Apex; each row links its NASA or primary source",
+   "year": 2026,
+   "type": "review sheet",
+   "url": "https://psi.nasa.gov/physci/repo/"
+  },
+  "ACME-BRE_DoD.docx": {
+   "id": "psi-20-dod",
+   "title": "ACME BRE description of data",
+   "publisher": "NASA PSI-20",
+   "year": null,
+   "type": "data guide",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-20"
+  },
+  "SAFFIRE-II DoD.docx": {
+   "id": "psi-99-dod",
+   "title": "Saffire-II description of data",
+   "publisher": "NASA PSI-99",
+   "year": null,
+   "type": "data guide",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+  },
+  "SAFFIRE-I and SAFFIRE-III DoD.docx": {
+   "id": "psi-98-dod",
+   "title": "Saffire-I and Saffire-III description of data",
+   "publisher": "NASA PSI-98 / PSI-100",
+   "year": null,
+   "type": "data guide",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98"
+  },
+  "SAFFIRE-III Operations.pdf": {
+   "id": "psi-100-ops",
+   "title": "Saffire-III Operations",
+   "publisher": "NASA PSI-100",
+   "year": null,
+   "type": "operations note",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100"
+  },
+  "SAME EIRD Rev 2.00 02-25-05 HIgh Q.pdf": {
+   "id": "psi-102-eird",
+   "title": "Exploration Investigation Requirements Document for SAME (Smoke Aerosol Measurement Experiment), Rev 2.00",
+   "publisher": "NASA PSI-102",
+   "year": 2005,
+   "type": "requirements document",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+  },
+  "SAMER_Final 0602 2014.pdf": {
+   "id": "psi-101-report",
+   "title": "Smoke Aerosol Measurement Experiment Re-flight (SAMER)",
+   "publisher": "NASA PSI-101",
+   "year": 2014,
+   "type": "report",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-101"
+  },
+  "FLEX A Decisive Step Forward in NASAs Combustion Research Program.pdf": {
+   "id": "psi-69-flex",
+   "title": "FLEX: A Decisive Step Forward in NASA's Combustion Research Program",
+   "publisher": "NASA PSI-69",
+   "year": null,
+   "type": "paper",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69"
+  },
+  "ISS_Researchers_Guide_-_Combustion_In_Reduced_Gravity.pdf": {
+   "id": "nasa-iss-guide-combustion",
+   "title": "A Researcher's Guide to: Combustion Science",
+   "publisher": "NASA ISS Program Science Office",
+   "year": null,
+   "type": "guide",
+   "url": "https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/"
+  }
+ },
+ "skip": {
+  "S1183MFA1020.pdf": "CAD drawing with no text layer (sample holder drawing).",
+  "GMT2014_050_BASS_S147M_TPB1_ProofSheet.pdf": "Photo proof sheet for PMMA film test B1: image names and timestamps only.",
+  "GMT2014_050_BASS_S148M_TPB3_ProofSheet.pdf": "Photo proof sheet for PMMA film test B3: image names and timestamps only.",
+  "PSI-25_Representative Image(s)_BASS-II_flame testing.jpg": "Image, not text.",
+  "PSI-25_metadata_PSI_metadata_PSI-101_BASS-II.zip": "Metadata archive; not needed for the evidence index.",
+  ".DS_Store": "macOS metadata."
+ },
+ "web_only": {
+  "PSI-26": {
+   "title": "NASA PSI-26: Burning and Suppression of Solids (BASS)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26"
+  },
+  "PSI-25": {
+   "title": "NASA PSI-25: Burning and Suppression of Solids-II (BASS-II)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  },
+  "PSI-98": {
+   "title": "NASA PSI-98: Spacecraft Fire Experiment-I (Saffire-I)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98"
+  },
+  "PSI-99": {
+   "title": "NASA PSI-99: Spacecraft Fire Experiment-II (Saffire-II)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+  },
+  "PSI-100": {
+   "title": "NASA PSI-100: Spacecraft Fire Experiment-III (Saffire-III)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100"
+  },
+  "PSI-20": {
+   "title": "NASA PSI-20: ACME Burning Rate Emulator (BRE)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-20"
+  },
+  "PSI-102": {
+   "title": "NASA PSI-102: Smoke Aerosol Measurement Experiment (SAME)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102"
+  },
+  "PSI-101": {
+   "title": "NASA PSI-101: Smoke Aerosol Measurement Experiment Re-flight (SAME-R)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-101"
+  },
+  "PSI-69": {
+   "title": "NASA PSI-69: Flame Extinguishment Experiment (FLEX)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69"
+  },
+  "PSI-159": {
+   "title": "NASA PSI-159: Cool Flames Investigation with Gases (CFI-G)",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159"
+  }
+ }
+}
