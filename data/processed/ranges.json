@@ -1,0 +1,1272 @@
+{
+ "generated_from": "data/processed/tests.json",
+ "all": {
+  "n_tests": 133,
+  "o2_pct_initial": {
+   "min": 13.6,
+   "max": 31.9,
+   "n": 133
+  },
+  "flow_start_cm_s": {
+   "min": 0.0,
+   "max": 49.0,
+   "n": 118
+  },
+  "flow_end_cm_s": {
+   "min": 0.0,
+   "max": 53.0,
+   "n": 63
+  },
+  "flow_any_cm_s": {
+   "min": 0.0,
+   "max": 53.0,
+   "n": 181
+  },
+  "pressure_kpa": {
+   "min": 54.1,
+   "max": 55.2,
+   "n": 3
+  },
+  "n_flow_changed": 40,
+  "flow_basis": [
+   "not established (raw air display only)",
+   "not in the event table",
+   "not recorded",
+   "published (Table 7.1)",
+   "raw air display (uncalibrated)"
+  ],
+  "outcomes": {
+   "Outcome not reviewed": 99,
+   "No sustained flame": 9,
+   "Flame observed; ending unstated": 8,
+   "Quenched after reduced airflow": 6,
+   "Fuel burned out": 2,
+   "No blowoff in tested challenge": 2,
+   "Not stated": 1,
+   "Blown out by higher airflow": 1,
+   "Extinguished after fan change; reused": 1,
+   "Did not ignite": 1,
+   "Burn reported; final ending not extracted": 1,
+   "Two-sided flame spread reported; final ending not extracted": 1,
+   "One-sided flame spread reported; final ending not extracted": 1
+  },
+  "n_listed_quenched": 6,
+  "n_anomaly_flagged": 8,
+  "n_conflict": 1,
+  "evidence_roles": {
+   "verified": 30,
+   "context": 99,
+   "published-event": 4
+  },
+  "gravity_labels": [
+   "microgravity (Cygnus)",
+   "microgravity (ISS)"
+  ],
+  "test_ids": [
+   "T1",
+   "T2",
+   "T4",
+   "T5",
+   "T6",
+   "T9",
+   "T10",
+   "T11",
+   "T12",
+   "T13",
+   "T14",
+   "T15",
+   "T16",
+   "T17",
+   "T18",
+   "T19",
+   "T20",
+   "T21",
+   "T22",
+   "T23",
+   "T24",
+   "T25",
+   "T26",
+   "T27",
+   "T28a",
+   "T28b",
+   "T29",
+   "F1",
+   "F2",
+   "F3",
+   "B1",
+   "B2",
+   "B3",
+   "B4",
+   "B5",
+   "B6",
+   "B7",
+   "B8",
+   "B9",
+   "B10",
+   "B11",
+   "B12",
+   "B13",
+   "B14",
+   "B15",
+   "B16",
+   "B17",
+   "B18",
+   "B19",
+   "B20",
+   "B21",
+   "B22",
+   "F4",
+   "M1",
+   "M2",
+   "M3",
+   "M4",
+   "M5",
+   "M6",
+   "M7",
+   "M8",
+   "M9",
+   "M10",
+   "M11",
+   "M12",
+   "M13",
+   "M14",
+   "M15",
+   "M16",
+   "M17",
+   "M18",
+   "M19",
+   "M20",
+   "O1",
+   "O2",
+   "O3a",
+   "O3b",
+   "O4",
+   "O5a",
+   "O5b",
+   "O6",
+   "O7",
+   "O8a",
+   "O8b",
+   "O9",
+   "O10",
+   "O11",
+   "O12",
+   "O13a",
+   "O13b",
+   "O14",
+   "O15a",
+   "O15b",
+   "O16",
+   "O17",
+   "O18",
+   "O19",
+   "O20",
+   "O21",
+   "O22",
+   "P1",
+   "P2",
+   "P3a",
+   "P3b",
+   "P4",
+   "P5",
+   "P6",
+   "P8",
+   "P9",
+   "P10",
+   "P12",
+   "P13a",
+   "P13b",
+   "P14",
+   "P15",
+   "P16",
+   "P17",
+   "P18",
+   "P19",
+   "P20",
+   "P21a",
+   "P21b",
+   "P22a",
+   "P22b",
+   "P23",
+   "P24",
+   "P25",
+   "T3",
+   "T7",
+   "SVI-4",
+   "SVI-5",
+   "SVI-6",
+   "SVI-8"
+  ]
+ },
+ "materials": [
+  {
+   "material_group": "SIBAL",
+   "labels": [
+    "1 cm SIBAL",
+    "1 cm SIBAL top side ign",
+    "2 cm SIBAL",
+    "2 cm Sibal moved igniter",
+    "SIBAL cotton/fiberglass fabric"
+   ],
+   "n_tests": 28,
+   "o2_pct_initial": {
+    "min": 16.4,
+    "max": 31.0,
+    "n": 28
+   },
+   "flow_start_cm_s": {
+    "min": 4.0,
+    "max": 11.0,
+    "n": 27
+   },
+   "flow_end_cm_s": {
+    "min": 2.0,
+    "max": 53.0,
+    "n": 27
+   },
+   "flow_any_cm_s": {
+    "min": 2.0,
+    "max": 53.0,
+    "n": 54
+   },
+   "pressure_kpa": {
+    "min": 54.1,
+    "max": 54.1,
+    "n": 1
+   },
+   "n_flow_changed": 17,
+   "flow_basis": [
+    "not in the event table",
+    "published (Table 7.1)"
+   ],
+   "outcomes": {
+    "Flame observed; ending unstated": 8,
+    "Quenched after reduced airflow": 6,
+    "No sustained flame": 6,
+    "Fuel burned out": 2,
+    "No blowoff in tested challenge": 2,
+    "Not stated": 1,
+    "Blown out by higher airflow": 1,
+    "Extinguished after fan change; reused": 1,
+    "Burn reported; final ending not extracted": 1
+   },
+   "n_listed_quenched": 6,
+   "n_anomaly_flagged": 5,
+   "n_conflict": 1,
+   "evidence_roles": {
+    "verified": 27,
+    "published-event": 1
+   },
+   "gravity_labels": [
+    "microgravity (Cygnus)",
+    "microgravity (ISS)"
+   ],
+   "test_ids": [
+    "T1",
+    "T2",
+    "T4",
+    "T5",
+    "T6",
+    "T9",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17",
+    "T18",
+    "T19",
+    "T20",
+    "T21",
+    "T22",
+    "T23",
+    "T24",
+    "T25",
+    "T26",
+    "T27",
+    "T28a",
+    "T28b",
+    "T29",
+    "SVI-5"
+   ],
+   "series": [
+    {
+     "series": "BASS-II",
+     "n_tests": 27,
+     "o2_pct_initial": {
+      "min": 16.4,
+      "max": 20.8,
+      "n": 27
+     },
+     "flow_start_cm_s": {
+      "min": 4.0,
+      "max": 11.0,
+      "n": 27
+     },
+     "flow_end_cm_s": {
+      "min": 2.0,
+      "max": 53.0,
+      "n": 27
+     },
+     "flow_any_cm_s": {
+      "min": 2.0,
+      "max": 53.0,
+      "n": 54
+     },
+     "pressure_kpa": null,
+     "n_flow_changed": 17,
+     "flow_basis": [
+      "published (Table 7.1)"
+     ],
+     "outcomes": {
+      "Flame observed; ending unstated": 8,
+      "Quenched after reduced airflow": 6,
+      "No sustained flame": 6,
+      "Fuel burned out": 2,
+      "No blowoff in tested challenge": 2,
+      "Not stated": 1,
+      "Blown out by higher airflow": 1,
+      "Extinguished after fan change; reused": 1
+     },
+     "n_listed_quenched": 6,
+     "n_anomaly_flagged": 5,
+     "n_conflict": 1,
+     "evidence_roles": {
+      "verified": 27
+     },
+     "gravity_labels": [
+      "microgravity (ISS)"
+     ],
+     "test_ids": [
+      "T1",
+      "T2",
+      "T4",
+      "T5",
+      "T6",
+      "T9",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16",
+      "T17",
+      "T18",
+      "T19",
+      "T20",
+      "T21",
+      "T22",
+      "T23",
+      "T24",
+      "T25",
+      "T26",
+      "T27",
+      "T28a",
+      "T28b",
+      "T29"
+     ]
+    },
+    {
+     "series": "Saffire VI",
+     "n_tests": 1,
+     "o2_pct_initial": {
+      "min": 31.0,
+      "max": 31.0,
+      "n": 1
+     },
+     "flow_start_cm_s": null,
+     "flow_end_cm_s": null,
+     "flow_any_cm_s": null,
+     "pressure_kpa": {
+      "min": 54.1,
+      "max": 54.1,
+      "n": 1
+     },
+     "n_flow_changed": 0,
+     "flow_basis": [
+      "not in the event table"
+     ],
+     "outcomes": {
+      "Burn reported; final ending not extracted": 1
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 0,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "published-event": 1
+     },
+     "gravity_labels": [
+      "microgravity (Cygnus)"
+     ],
+     "test_ids": [
+      "SVI-5"
+     ]
+    }
+   ]
+  },
+  {
+   "material_group": "Nomex",
+   "labels": [
+    "Nomex",
+    "Nomex natural (nomex III)"
+   ],
+   "n_tests": 4,
+   "o2_pct_initial": {
+    "min": 21.0,
+    "max": 31.9,
+    "n": 4
+   },
+   "flow_start_cm_s": null,
+   "flow_end_cm_s": null,
+   "flow_any_cm_s": null,
+   "pressure_kpa": null,
+   "n_flow_changed": 0,
+   "flow_basis": [
+    "not established (raw air display only)",
+    "not in the event table"
+   ],
+   "outcomes": {
+    "No sustained flame": 3,
+    "Did not ignite": 1
+   },
+   "n_listed_quenched": 0,
+   "n_anomaly_flagged": 0,
+   "n_conflict": 0,
+   "evidence_roles": {
+    "verified": 3,
+    "published-event": 1
+   },
+   "gravity_labels": [
+    "microgravity (Cygnus)",
+    "microgravity (ISS)"
+   ],
+   "test_ids": [
+    "F1",
+    "F2",
+    "F3",
+    "SVI-4"
+   ],
+   "series": [
+    {
+     "series": "BASS-II",
+     "n_tests": 3,
+     "o2_pct_initial": {
+      "min": 21.0,
+      "max": 22.2,
+      "n": 3
+     },
+     "flow_start_cm_s": null,
+     "flow_end_cm_s": null,
+     "flow_any_cm_s": null,
+     "pressure_kpa": null,
+     "n_flow_changed": 0,
+     "flow_basis": [
+      "not established (raw air display only)"
+     ],
+     "outcomes": {
+      "No sustained flame": 3
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 0,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "verified": 3
+     },
+     "gravity_labels": [
+      "microgravity (ISS)"
+     ],
+     "test_ids": [
+      "F1",
+      "F2",
+      "F3"
+     ]
+    },
+    {
+     "series": "Saffire VI",
+     "n_tests": 1,
+     "o2_pct_initial": {
+      "min": 31.9,
+      "max": 31.9,
+      "n": 1
+     },
+     "flow_start_cm_s": null,
+     "flow_end_cm_s": null,
+     "flow_any_cm_s": null,
+     "pressure_kpa": null,
+     "n_flow_changed": 0,
+     "flow_basis": [
+      "not in the event table"
+     ],
+     "outcomes": {
+      "Did not ignite": 1
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 0,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "published-event": 1
+     },
+     "gravity_labels": [
+      "microgravity (Cygnus)"
+     ],
+     "test_ids": [
+      "SVI-4"
+     ]
+    }
+   ]
+  },
+  {
+   "material_group": "PMMA slab",
+   "labels": [
+    "1 cm wide PMMA 1 mm thick",
+    "1 cm wide PMMA 2 mm thick",
+    "1 cm wide PMMA 3 mm thick",
+    "1 cm wide PMMA 5 mm thick",
+    "1 mm thick PMMA   1 sided   2 cm",
+    "1 mm thick PMMA   2 cm wide",
+    "2 cm   4 mm 1 sided PMMA slab",
+    "2 cm wide   5 mm thick 1 sided PMMA",
+    "2 cm wide PMMA 2 mm thick",
+    "2 cm wide PMMA 3 mm thick",
+    "2 mm thick PMMA   2 cm wide",
+    "2mm thick PMMA   1 sided   2 cm wide",
+    "3 mm thick PMMA   2 sided   2 cm thick",
+    "3 mm thick PMMA 1 sided    2 cm wide",
+    "4 mm thick   1 cm wide PMMA slab",
+    "4 mm thick   2 cm 2ide PMMA slab",
+    "4 mm thick PMMA   2 cm wide",
+    "5 mm thick PMMA   2 cm wide",
+    "PMMA, one-sided spread",
+    "PMMA, two-sided spread"
+   ],
+   "n_tests": 22,
+   "o2_pct_initial": {
+    "min": 17.9,
+    "max": 30.3,
+    "n": 22
+   },
+   "flow_start_cm_s": {
+    "min": 5.0,
+    "max": 20.0,
+    "n": 19
+   },
+   "flow_end_cm_s": {
+    "min": 0.0,
+    "max": 18.0,
+    "n": 15
+   },
+   "flow_any_cm_s": {
+    "min": 0.0,
+    "max": 20.0,
+    "n": 34
+   },
+   "pressure_kpa": {
+    "min": 54.6,
+    "max": 55.2,
+    "n": 2
+   },
+   "n_flow_changed": 14,
+   "flow_basis": [
+    "not in the event table",
+    "not recorded",
+    "raw air display (uncalibrated)"
+   ],
+   "outcomes": {
+    "Outcome not reviewed": 20,
+    "Two-sided flame spread reported; final ending not extracted": 1,
+    "One-sided flame spread reported; final ending not extracted": 1
+   },
+   "n_listed_quenched": 0,
+   "n_anomaly_flagged": 0,
+   "n_conflict": 0,
+   "evidence_roles": {
+    "context": 20,
+    "published-event": 2
+   },
+   "gravity_labels": [
+    "microgravity (Cygnus)",
+    "microgravity (ISS)"
+   ],
+   "test_ids": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16",
+    "M17",
+    "M18",
+    "M19",
+    "M20",
+    "SVI-6",
+    "SVI-8"
+   ],
+   "series": [
+    {
+     "series": "BASS-II",
+     "n_tests": 20,
+     "o2_pct_initial": {
+      "min": 17.9,
+      "max": 22.2,
+      "n": 20
+     },
+     "flow_start_cm_s": {
+      "min": 5.0,
+      "max": 20.0,
+      "n": 19
+     },
+     "flow_end_cm_s": {
+      "min": 0.0,
+      "max": 18.0,
+      "n": 15
+     },
+     "flow_any_cm_s": {
+      "min": 0.0,
+      "max": 20.0,
+      "n": 34
+     },
+     "pressure_kpa": null,
+     "n_flow_changed": 14,
+     "flow_basis": [
+      "not recorded",
+      "raw air display (uncalibrated)"
+     ],
+     "outcomes": {
+      "Outcome not reviewed": 20
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 0,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "context": 20
+     },
+     "gravity_labels": [
+      "microgravity (ISS)"
+     ],
+     "test_ids": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6",
+      "M7",
+      "M8",
+      "M9",
+      "M10",
+      "M11",
+      "M12",
+      "M13",
+      "M14",
+      "M15",
+      "M16",
+      "M17",
+      "M18",
+      "M19",
+      "M20"
+     ]
+    },
+    {
+     "series": "Saffire VI",
+     "n_tests": 2,
+     "o2_pct_initial": {
+      "min": 28.8,
+      "max": 30.3,
+      "n": 2
+     },
+     "flow_start_cm_s": null,
+     "flow_end_cm_s": null,
+     "flow_any_cm_s": null,
+     "pressure_kpa": {
+      "min": 54.6,
+      "max": 55.2,
+      "n": 2
+     },
+     "n_flow_changed": 0,
+     "flow_basis": [
+      "not in the event table"
+     ],
+     "outcomes": {
+      "Two-sided flame spread reported; final ending not extracted": 1,
+      "One-sided flame spread reported; final ending not extracted": 1
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 0,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "published-event": 2
+     },
+     "gravity_labels": [
+      "microgravity (Cygnus)"
+     ],
+     "test_ids": [
+      "SVI-6",
+      "SVI-8"
+     ]
+    }
+   ]
+  },
+  {
+   "material_group": "PMMA rod",
+   "labels": [
+    "0.5\" black rod",
+    "1/2\" clear PMMA rod",
+    "1/2\" clear rod",
+    "1/4 blac rod",
+    "1/4 black rod",
+    "1/4 clear rod",
+    "1/4\"  black rod",
+    "1/4\" black rod",
+    "1/4\" clear rod",
+    "3/8\" black rod",
+    "3/8\" clear rod",
+    "3/8\"clear rod"
+   ],
+   "n_tests": 54,
+   "o2_pct_initial": {
+    "min": 13.6,
+    "max": 22.2,
+    "n": 54
+   },
+   "flow_start_cm_s": {
+    "min": 0.0,
+    "max": 49.0,
+    "n": 47
+   },
+   "flow_end_cm_s": {
+    "min": 0.0,
+    "max": 11.0,
+    "n": 10
+   },
+   "flow_any_cm_s": {
+    "min": 0.0,
+    "max": 49.0,
+    "n": 57
+   },
+   "pressure_kpa": null,
+   "n_flow_changed": 6,
+   "flow_basis": [
+    "not recorded",
+    "raw air display (uncalibrated)"
+   ],
+   "outcomes": {
+    "Outcome not reviewed": 54
+   },
+   "n_listed_quenched": 0,
+   "n_anomaly_flagged": 2,
+   "n_conflict": 0,
+   "evidence_roles": {
+    "context": 54
+   },
+   "gravity_labels": [
+    "microgravity (ISS)"
+   ],
+   "test_ids": [
+    "O1",
+    "O2",
+    "O3a",
+    "O3b",
+    "O4",
+    "O5a",
+    "O5b",
+    "O6",
+    "O7",
+    "O8a",
+    "O8b",
+    "O9",
+    "O10",
+    "O11",
+    "O12",
+    "O13a",
+    "O13b",
+    "O14",
+    "O15a",
+    "O15b",
+    "O16",
+    "O17",
+    "O18",
+    "O19",
+    "O20",
+    "O21",
+    "O22",
+    "P1",
+    "P2",
+    "P3a",
+    "P3b",
+    "P4",
+    "P5",
+    "P6",
+    "P8",
+    "P9",
+    "P10",
+    "P12",
+    "P13a",
+    "P13b",
+    "P14",
+    "P15",
+    "P16",
+    "P17",
+    "P18",
+    "P19",
+    "P20",
+    "P21a",
+    "P21b",
+    "P22a",
+    "P22b",
+    "P23",
+    "P24",
+    "P25"
+   ],
+   "series": [
+    {
+     "series": "BASS-II",
+     "n_tests": 54,
+     "o2_pct_initial": {
+      "min": 13.6,
+      "max": 22.2,
+      "n": 54
+     },
+     "flow_start_cm_s": {
+      "min": 0.0,
+      "max": 49.0,
+      "n": 47
+     },
+     "flow_end_cm_s": {
+      "min": 0.0,
+      "max": 11.0,
+      "n": 10
+     },
+     "flow_any_cm_s": {
+      "min": 0.0,
+      "max": 49.0,
+      "n": 57
+     },
+     "pressure_kpa": null,
+     "n_flow_changed": 6,
+     "flow_basis": [
+      "not recorded",
+      "raw air display (uncalibrated)"
+     ],
+     "outcomes": {
+      "Outcome not reviewed": 54
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 2,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "context": 54
+     },
+     "gravity_labels": [
+      "microgravity (ISS)"
+     ],
+     "test_ids": [
+      "O1",
+      "O2",
+      "O3a",
+      "O3b",
+      "O4",
+      "O5a",
+      "O5b",
+      "O6",
+      "O7",
+      "O8a",
+      "O8b",
+      "O9",
+      "O10",
+      "O11",
+      "O12",
+      "O13a",
+      "O13b",
+      "O14",
+      "O15a",
+      "O15b",
+      "O16",
+      "O17",
+      "O18",
+      "O19",
+      "O20",
+      "O21",
+      "O22",
+      "P1",
+      "P2",
+      "P3a",
+      "P3b",
+      "P4",
+      "P5",
+      "P6",
+      "P8",
+      "P9",
+      "P10",
+      "P12",
+      "P13a",
+      "P13b",
+      "P14",
+      "P15",
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P21a",
+      "P21b",
+      "P22a",
+      "P22b",
+      "P23",
+      "P24",
+      "P25"
+     ]
+    }
+   ]
+  },
+  {
+   "material_group": "PMMA film",
+   "labels": [
+    "1 cm   0.2 mm PMMA film",
+    "1 cm wide 200 micron thick PMMA",
+    "100 micron PMMA film   2 cm wide",
+    "100 micron film   2 cm wide",
+    "2 cm   0.1 mm PMMA film",
+    "2 cm   0.2 mm PMMA film",
+    "2 cm   0.4 mm thick film",
+    "2 cm 0.1 mm PMMA film",
+    "2 cm 100 micron thick PMMA",
+    "200 micron  2 cm wide",
+    "200 micron PMMA film   2 cm wide",
+    "300 micron PMMA film   2 cm wide",
+    "300 micron film   2 cm wide",
+    "400 micron film   2 cm wide"
+   ],
+   "n_tests": 22,
+   "o2_pct_initial": {
+    "min": 15.0,
+    "max": 22.2,
+    "n": 22
+   },
+   "flow_start_cm_s": {
+    "min": 2.0,
+    "max": 10.0,
+    "n": 22
+   },
+   "flow_end_cm_s": {
+    "min": 0.0,
+    "max": 5.0,
+    "n": 10
+   },
+   "flow_any_cm_s": {
+    "min": 0.0,
+    "max": 10.0,
+    "n": 32
+   },
+   "pressure_kpa": null,
+   "n_flow_changed": 3,
+   "flow_basis": [
+    "raw air display (uncalibrated)"
+   ],
+   "outcomes": {
+    "Outcome not reviewed": 22
+   },
+   "n_listed_quenched": 0,
+   "n_anomaly_flagged": 1,
+   "n_conflict": 0,
+   "evidence_roles": {
+    "context": 22
+   },
+   "gravity_labels": [
+    "microgravity (ISS)"
+   ],
+   "test_ids": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9",
+    "B10",
+    "B11",
+    "B12",
+    "B13",
+    "B14",
+    "B15",
+    "B16",
+    "B17",
+    "B18",
+    "B19",
+    "B20",
+    "B21",
+    "B22"
+   ],
+   "series": [
+    {
+     "series": "BASS-II",
+     "n_tests": 22,
+     "o2_pct_initial": {
+      "min": 15.0,
+      "max": 22.2,
+      "n": 22
+     },
+     "flow_start_cm_s": {
+      "min": 2.0,
+      "max": 10.0,
+      "n": 22
+     },
+     "flow_end_cm_s": {
+      "min": 0.0,
+      "max": 5.0,
+      "n": 10
+     },
+     "flow_any_cm_s": {
+      "min": 0.0,
+      "max": 10.0,
+      "n": 32
+     },
+     "pressure_kpa": null,
+     "n_flow_changed": 3,
+     "flow_basis": [
+      "raw air display (uncalibrated)"
+     ],
+     "outcomes": {
+      "Outcome not reviewed": 22
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 1,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "context": 22
+     },
+     "gravity_labels": [
+      "microgravity (ISS)"
+     ],
+     "test_ids": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B9",
+      "B10",
+      "B11",
+      "B12",
+      "B13",
+      "B14",
+      "B15",
+      "B16",
+      "B17",
+      "B18",
+      "B19",
+      "B20",
+      "B21",
+      "B22"
+     ]
+    }
+   ]
+  },
+  {
+   "material_group": "Spherical section",
+   "labels": [
+    "4 cm spherical section"
+   ],
+   "n_tests": 2,
+   "o2_pct_initial": {
+    "min": 17.2,
+    "max": 17.3,
+    "n": 2
+   },
+   "flow_start_cm_s": {
+    "min": 10.0,
+    "max": 10.0,
+    "n": 2
+   },
+   "flow_end_cm_s": {
+    "min": 10.0,
+    "max": 10.0,
+    "n": 1
+   },
+   "flow_any_cm_s": {
+    "min": 10.0,
+    "max": 10.0,
+    "n": 3
+   },
+   "pressure_kpa": null,
+   "n_flow_changed": 0,
+   "flow_basis": [
+    "raw air display (uncalibrated)"
+   ],
+   "outcomes": {
+    "Outcome not reviewed": 2
+   },
+   "n_listed_quenched": 0,
+   "n_anomaly_flagged": 0,
+   "n_conflict": 0,
+   "evidence_roles": {
+    "context": 2
+   },
+   "gravity_labels": [
+    "microgravity (ISS)"
+   ],
+   "test_ids": [
+    "T3",
+    "T7"
+   ],
+   "series": [
+    {
+     "series": "BASS-II",
+     "n_tests": 2,
+     "o2_pct_initial": {
+      "min": 17.2,
+      "max": 17.3,
+      "n": 2
+     },
+     "flow_start_cm_s": {
+      "min": 10.0,
+      "max": 10.0,
+      "n": 2
+     },
+     "flow_end_cm_s": {
+      "min": 10.0,
+      "max": 10.0,
+      "n": 1
+     },
+     "flow_any_cm_s": {
+      "min": 10.0,
+      "max": 10.0,
+      "n": 3
+     },
+     "pressure_kpa": null,
+     "n_flow_changed": 0,
+     "flow_basis": [
+      "raw air display (uncalibrated)"
+     ],
+     "outcomes": {
+      "Outcome not reviewed": 2
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 0,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "context": 2
+     },
+     "gravity_labels": [
+      "microgravity (ISS)"
+     ],
+     "test_ids": [
+      "T3",
+      "T7"
+     ]
+    }
+   ]
+  },
+  {
+   "material_group": "Wax candle",
+   "labels": [
+    "Japan Wax candle"
+   ],
+   "n_tests": 1,
+   "o2_pct_initial": {
+    "min": 17.4,
+    "max": 17.4,
+    "n": 1
+   },
+   "flow_start_cm_s": {
+    "min": 3.0,
+    "max": 3.0,
+    "n": 1
+   },
+   "flow_end_cm_s": null,
+   "flow_any_cm_s": {
+    "min": 3.0,
+    "max": 3.0,
+    "n": 1
+   },
+   "pressure_kpa": null,
+   "n_flow_changed": 0,
+   "flow_basis": [
+    "raw air display (uncalibrated)"
+   ],
+   "outcomes": {
+    "Outcome not reviewed": 1
+   },
+   "n_listed_quenched": 0,
+   "n_anomaly_flagged": 0,
+   "n_conflict": 0,
+   "evidence_roles": {
+    "context": 1
+   },
+   "gravity_labels": [
+    "microgravity (ISS)"
+   ],
+   "test_ids": [
+    "F4"
+   ],
+   "series": [
+    {
+     "series": "BASS-II",
+     "n_tests": 1,
+     "o2_pct_initial": {
+      "min": 17.4,
+      "max": 17.4,
+      "n": 1
+     },
+     "flow_start_cm_s": {
+      "min": 3.0,
+      "max": 3.0,
+      "n": 1
+     },
+     "flow_end_cm_s": null,
+     "flow_any_cm_s": {
+      "min": 3.0,
+      "max": 3.0,
+      "n": 1
+     },
+     "pressure_kpa": null,
+     "n_flow_changed": 0,
+     "flow_basis": [
+      "raw air display (uncalibrated)"
+     ],
+     "outcomes": {
+      "Outcome not reviewed": 1
+     },
+     "n_listed_quenched": 0,
+     "n_anomaly_flagged": 0,
+     "n_conflict": 0,
+     "evidence_roles": {
+      "context": 1
+     },
+     "gravity_labels": [
+      "microgravity (ISS)"
+     ],
+     "test_ids": [
+      "F4"
+     ]
+    }
+   ]
+  }
+ ],
+ "series": [
+  "BASS-II",
+  "Saffire VI"
+ ],
+ "gravity_labels": [
+  "microgravity (Cygnus)",
+  "microgravity (ISS)"
+ ],
+ "n_spread_rates_published": 0
+}

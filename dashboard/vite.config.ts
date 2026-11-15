@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwind from '@tailwindcss/vite'
-import { fileURLToPath } from 'node:url'
 
-// Allow the dashboard to import the shared corpus in ../datasets (repo root)
 export default defineConfig({
   plugins: [react(), tailwind()],
-  server: {
-    fs: { allow: [fileURLToPath(new URL('..', import.meta.url))] },
+  server: { port: 5173, strictPort: true },
+  build: {
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: { output: { manualChunks: (id) => (id.includes('node_modules/three') || id.includes('@react-three') || id.includes('postprocessing') ? 'three' : undefined) } },
   },
 })

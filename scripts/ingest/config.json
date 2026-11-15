@@ -1,0 +1,17 @@
+{
+  "_comment": "Every threshold used by ingestion and by the evidence rating lives here. Change it here, rerun `make ingest`, and both the backend and the frontend pick it up from data/processed/rating_config.json.",
+  "chunk": { "max_words": 450, "overlap_words": 60, "min_words": 12 },
+  "low_text_chars": 100,
+  "ocr_dpi": 200,
+  "anomaly": { "final_o2_max_drop_points": 5.0, "final_o2_max_rise_points": 0.3 },
+  "rating": {
+    "match_o2_points": 0.5,
+    "match_flow_cm_s": 2.0,
+    "near_o2_points": 2.0,
+    "near_flow_cm_s": 10.0,
+    "match_pressure_kpa": 5.0,
+    "far_pressure_kpa": 15.0,
+    "nearest_n": 5,
+    "tested_gravity_labels": ["0g"]
+  }
+}

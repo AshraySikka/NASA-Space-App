@@ -1,0 +1,30 @@
+{
+  "_comment": "Short verbatim quotes from allowlisted web pages that are NOT in raw_data. Each was read on the live page on the date shown. The backend re-fetches the URL at answer time when it has network access; if it cannot, the UI labels the quote as a dated snapshot. To add one: paste the exact words, the URL, and the date you read it.",
+  "entries": [
+    {
+      "id": "web-nasa-fm2",
+      "tier": 2,
+      "title": "Flammability of Materials on the Moon (FM2)",
+      "publisher": "NASA Glenn Research Center",
+      "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/flammability-of-materials-on-the-moon-fm2/",
+      "read_on": "2026-11-14",
+      "quotes": [
+        "FM2 is the first-ever combustion experiment to be performed on another planetary body.",
+        "Conduct the first-ever observations and measurements of flame spread on the Moon."
+      ],
+      "note": "Project description page. It reports plans and hardware, not measured results."
+    },
+    {
+      "id": "web-jaxa-flare-leaflet",
+      "tier": 3,
+      "title": "Combustion Experiment in Microgravity (FLARE leaflet)",
+      "publisher": "JAXA Human Spaceflight Technology Directorate",
+      "url": "https://humans-in-space.jaxa.jp/2026/07/Leaflet_CombustionExperimentInMicrogravity.pdf",
+      "read_on": "2026-11-14",
+      "quotes": [
+        "materials can be more flammable in microgravity or reduced-gravity environments (such as the Moon and Mars)"
+      ],
+      "note": "Qualitative statement only, attributed in the leaflet to NASA drop tower experiments. No numbers are given."
+    }
+  ]
+}

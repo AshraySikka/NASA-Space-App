@@ -1,0 +1,24 @@
+# Render blueprint for the API. Set the secret env vars in the Render dashboard.
+services:
+  - type: web
+    name: flame-in-freefall-api
+    runtime: python
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/status
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: CLAUDE_MODEL
+        sync: false
+      - key: ALLOWED_DOMAINS
+        value: psi.nasa.gov,ntrs.nasa.gov,www.nasa.gov,sma.nasa.gov,spinoff.nasa.gov,humans-in-space.jaxa.jp,discovery.ucl.ac.uk,par.nsf.gov,doi.org

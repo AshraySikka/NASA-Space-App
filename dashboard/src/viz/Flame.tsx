@@ -3,7 +3,7 @@
 //
 // Physical behavior (2026-11-13 sanity pass):
 // - The front sweeps from the upwind edge to the downwind edge at the
-//   interpolated spread rate, then the sample is consumed and resets.
+//   illustrative animation speed, then the sample resets. No spread rate is implied.
 // - Flicker scales with gravity: steady at 0g, buoyant chaos at 1g.
 // - Flow adds turbulence flutter; O2 drives color and brightness
 //   (dim sooty red at low O2, white-hot at high O2).
@@ -24,7 +24,7 @@ import {
   SMOKE_FRAG,
   SMOKE_VERT,
 } from './shaders'
-import type { Controls, VizState } from './types'
+import type { SceneControls as Controls, VizState } from './types'
 
 /** Shared between Flame (writes) and Duct (reads for the char zone). */
 export interface FrontState {
@@ -202,10 +202,12 @@ export function Flame({
 
     // front sweeps downwind once, then the sample is consumed and resets
     if (f.phase === 'burning') {
-      if (burning && viz.spread_rate_mm_s > 0) {
-        f.x += viz.spread_rate_mm_s * 0.35 * Math.min(dt, 0.1)
-        if (f.x >= SAMPLE_HALF) {
-          f.x = SAMPLE_HALF
+      if (burning && viz.anim_speed > 0) {
+        // illustrative sweep: the front stops where the recorded outcome says the flame died
+        const stopX = -SAMPLE_HALF + 2 * SAMPLE_HALF * viz.stop_at
+        f.x += viz.anim_speed * 0.35 * Math.min(dt, 0.1)
+        if (f.x >= stopX) {
+          f.x = stopX
           f.phase = 'done'
           f.doneAt = t
         }
