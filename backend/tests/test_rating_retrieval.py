@@ -239,3 +239,34 @@ def test_airflow_units_are_converted_and_no_question_is_asked_when_it_is_complet
     assert "clarify" not in _ask_full("What happened to SIBAL at 18.7% oxygen and 2.2 cm/s?")
     assert "clarify" not in _ask_full("What has not been tested for SIBAL?")
     assert "clarify" not in _ask_full("What would happen to Nomex on the Moon at 12% oxygen?"), "partial gravity is outside the data whatever the airflow"
+
+
+def test_material_with_no_published_airflow_is_answered_not_asked_about():
+    out = _ask_full("What happened to Nomex at 21% oxygen?")
+    assert "clarify" not in out and out["found"]
+
+
+def test_general_question_with_borrowed_simulator_material_is_not_interrupted():
+    import asyncio
+
+    async def emit(*a, **k):
+        pass
+
+    sim = {"material": "SIBAL", "o2_pct": 18.7, "flow_cm_s": 5, "gravity": "0g", "pressure_kpa": None}
+    out = asyncio.run(answer.run({"question": "Is there data above 21% oxygen for fabric?", "simulator": sim}, emit))
+    assert "clarify" not in out
+
+
+def test_live_search_page_that_is_off_topic_is_not_quoted(monkeypatch):
+    """With keys set, a NASA page that comes back for an unrelated question must not turn into an answer."""
+    monkeypatch.setenv("GEMINI_API_KEY", "x")
+    monkeypatch.setenv("GEMINI_MODEL", "some-model")
+
+    async def fake_search(question, domains):
+        return [{"url": "https://www.nasa.gov/missions/station/", "title": "Space station"}]
+
+    monkeypatch.setattr("app.llm.gemini_search_urls", fake_search)
+    monkeypatch.setattr("app.web.resolve_grounding_url", lambda u: u)
+    monkeypatch.setattr("app.web.fetch_text", lambda u: "The International Space Station orbits Earth about every ninety minutes. Crews study biology, physics and human health aboard the laboratory. " * 20)
+    out = ask("What is the price of bitcoin today?")
+    assert out["summary"] == answer.NOT_FOUND and not out["claims"]
